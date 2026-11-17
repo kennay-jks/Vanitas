@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANITAS</title>
+    <link rel="shortcut icon" href="image/icon2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/all.css">
+</head>
+<body>
+    <nav>
+        <a href="#top" class="logo-link"><img src="image/vanitaslogo.svg" alt="VANITAS" class="logo"></a>
+        <div class="menu">
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#work" data-i18n="nav_work">Work</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+            <button type="button" id="langBtn" class="lang-btn" aria-label="Language">
+                <img src="image/traducao.svg" alt=""><span id="langCode">EN</span>
+            </button>
+        </div>
+    </nav>
+    <main id="top">
+        <section class="abo">
+            <div class="ccon carr1">
+                <div class="track down">
+                <figure class="slide"><img src="image/slider/lastlab.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider/T-Shirt.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider/darkangle.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider/Screen(3).jpg" alt=""></figure>
+                <figure class="slide" aria-hidden="true"><img src="image/slider/lastlab.jpg" alt=""></figure>
+                </div>
+            </div>
+            <div class="ccon carr2">
+                <div class="track up">
+                <figure class="slide"><img src="image/slider2/coffee.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider2/Exhibition.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider2/flavory.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider2/studio2.jpg" alt=""></figure>
+                <figure class="slide" aria-hidden="true"><img src="image/slider2/coffee.jpg" alt=""></figure>
+                </div>
+            </div>
+            <div class="ccon carr3">
+                <div class="track down">
+                <figure class="slide"><img src="image/slider3/macbook.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider3/img4.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider3/wake.jpg" alt=""></figure>
+                <figure class="slide"><img src="image/slider3/Bottle.jpg" alt=""></figure>
+                <figure class="slide" aria-hidden="true"><img src="image/slider3/macbook.jpg" alt=""></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec sec-about" id="about">
+            <div class="about-txt">
+                <h2 data-i18n="about_title">About</h2>
+                <p data-i18n="about_text" data-typewriter></p>
+            </div>
+            <!-- <img class="retrato" src="image/Retrato.jpg" alt=""> -->
+        </section>
+
+        <section class="port-img">
+            <img class="imgp" src="image/slider2/Exhibition.jpg" alt="">
+            <img class="imgp" src="image/slider/lastlab.jpg" alt="">
+            <img class="imgp" src="image/slider/Screen(3).jpg" alt="">
+            <img class="imgp" src="image/slider/darkangle.jpg" alt="">
+        </section>
+
+        <section class="sec sec-work" id="work">
+            <div class="glass">
+                <div class="glass-txt">
+                    <h2 data-i18n="work_title">Work</h2>
+                    <p data-i18n="work_text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="port-img">
+            <img class="imgp" src="image/slider3/macbook.jpg" alt="">
+            <img class="imgp" src="image/slider2/studio2.jpg" alt="">
+            <img class="imgp" src="image/slider2/coffee.jpg" alt="">
+            <img class="imgp" src="image/slider/T-Shirt.jpg" alt="">
+        </section>
+
+        <section class="sec sec-contact" id="contact">
+            <div class="glass">
+                <div class="glass-txt contact-row">
+                    <div class="contact-txt">
+                        <h2 data-i18n="contact_title">Contact</h2>
+                        <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contact">
+                            <input type="email" name="email" data-i18n-ph="form_email" placeholder="E-mail" autocomplete="email" required>
+                            <textarea name="message" data-i18n-ph="form_message" placeholder="Message" required></textarea>
+                            <input type="text" name="bot-field" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <button type="submit" class="send-btn" data-i18n="form_send">Send</button>
+                            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                    <div class="social">
+                        <a class="soc insta" href="https://www.instagram.com/vanitasbranding/" target="_blank" rel="noopener" aria-label="Instagram"><img src="image/instagram.svg" alt=""></a>
+                        <a class="soc" href="mailto:vanitasbranding@gmail.com" aria-label="E-mail" target="_blank"><img src="image/arroba.svg" alt=""></a>
+                        <a class="soc lin" href="https://www.linkedin.com/in/vanitas-branding-4584013aa/" aria-label="Linkedin" target="_blank"><img src="image/linkedin.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="port-img">
+            <img class="imgp" src="image/slider3/Mockup2.jpg" alt="">
+            <img class="imgp" src="image/slider3/Bottle.jpg" alt="">
+            <img class="imgp" src="image/slider2/carb1.jpg" alt="">
+            <img class="imgp" src="image/slider3/wake.jpg" alt="">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 - VANITAS</p>
+    </footer>
+    <script src="js/lang.js"></script>
+</body>
+</html>
