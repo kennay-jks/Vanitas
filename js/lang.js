@@ -133,12 +133,22 @@
         sendBtn.disabled = true;
         showStatus('form_sending', 'info');
         try {
-            const res = await fetch('/', {
+            // envia por dois caminhos: FormSubmit (chega no e-mail) e Netlify Forms (fica guardado no painel)
+            const viaEmail = fetch('https://formsubmit.co/ajax/' + TO_EMAIL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ email, message, _subject: 'Novo contato pelo site VANITAS', _template: 'table', _captcha: 'false' })
+            }).then(async r => {
+                const d = await r.json().catch(() => ({}));
+                if (!r.ok || d.success === 'false' || d.success === false) throw new Error('email');
+            });
+            const viaNetlify = fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams({ 'form-name': 'contact', email, message }).toString()
-            });
-            if (!res.ok) throw new Error('send');
+            }).then(r => { if (!r.ok) throw new Error('netlify'); });
+            const results = await Promise.allSettled([viaEmail, viaNetlify]);
+            if (!results.some(r => r.status === 'fulfilled')) throw new Error('send');
             showStatus('form_ok', 'ok');
             form.reset();
         } catch (err) {
