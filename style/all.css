@@ -19,6 +19,9 @@
     transition: .2s;
     text-transform: uppercase;
 }
+.stroke {
+    text-shadow: #000 1.2px 1px 1px;
+}
 html { scrollbar-width: none; scroll-behavior: smooth; }
 ::-webkit-scrollbar { display: none; }
 body { background: var(--color2); overflow-x: hidden; padding-top: var(--nav-h); }
